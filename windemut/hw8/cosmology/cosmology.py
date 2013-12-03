@@ -24,7 +24,7 @@ class Cosmology(object):
     
     References
     ----------
-    Higgs (1999)
+    Hogg (1999)
     
     """
     def __init__(self, OmegaM=0.3, h=0.7):
@@ -71,7 +71,7 @@ class Cosmology(object):
         
         References
         ----------
-        Eqn. 15 of Higgs (1999)
+        Eqn. 15 of Hogg (1999)
         """
         # Compute the comoving distance in Mpc using scipy.integrate.quad
         # following Eqn 15
@@ -106,7 +106,7 @@ class Cosmology(object):
         
         References
         ----------
-        Eqn. 16 of Higgs (1999)
+        Eqn. 16 of Hogg (1999)
         """
         # Compute the transverse comoving distance in Mpc (Eqn 16)
         if self.OmegaK > 0:
@@ -142,7 +142,7 @@ class Cosmology(object):
 
         References
         ----------
-        Eqn. 18 of Higgs (1999)
+        Eqn. 18 of Hogg (1999)
         """
         # Compute the Angular Diameter distance in Mpc (Eqn 18)
         y = self.DM(z) / (1. + z)
@@ -174,7 +174,7 @@ class Cosmology(object):
 
         References
         ----------
-        Eqn. 21 of Higgs (1999)
+        Eqn. 21 of Hogg (1999)
         """
         # Compute the Luminosity Distance in Mpc (Eqn 21)
         y = (1. + z) * self.DM(z)
@@ -206,7 +206,7 @@ class Cosmology(object):
         
         References
         ----------
-        Eqn. 25 of Higgs (1999)
+        Eqn. 25 of Hogg (1999)
         """
         # Compute the distance modulus (Eqn 25)
         y = 5.0 * np.log10(self.DL(z) * 1e6 / 10.)
